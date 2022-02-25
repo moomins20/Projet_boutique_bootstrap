@@ -1,7 +1,7 @@
 ## Projet_boutique_bootstrap
 
 
-####Énoncé du projet à réaliser dans le cadre du cours "Interface mobile"
+#### Énoncé du projet à réaliser dans le cadre du cours "Interface mobile"
 
 Afin d'atteindre les objectifs de ce travail, il vous faudra concevoir et réaliser une page
 d’interface de site ou d’application Web, conçue avec une approche « mobile en premier »,
@@ -11,6 +11,6 @@ Afin de réaliser une interface responsive solide, vous produirez votre grille �
 Bootstrap 5.
 
 
-###Ligne de commande pour démarrer le serveur
+### Ligne de commande pour démarrer le serveur
 
 gulp dev
