@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./assets/styles/css/styles.css">
+    <title>Animal Crossing New Horizons</title>
+</head>
+<body>   
+    <header>
+        <nav class="navbar navbar-expand-lg bg-warning">
+            <div class="container-fluid mx-5">
+            <a class="navbar-brand" href="#"><img src="./assets/img/logo-acnh-en.png" alt="logo animal crossing" id="logo"></a>
+            <h1 class="mobile text-primary">Boutique</h1>
+            <button class="navbar-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" href="#">Accueil</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Explorer</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" aria-current="page" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Boutique
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<li><a class="dropdown-item" href="#">Personnages</a></li>
+						<li><a class="dropdown-item" href="#">Poissons</a></li>
+						<li><a class="dropdown-item" href="#">Insectes</a></li>
+						<li><a class="dropdown-item" href="#">Fossiles</a></li>
+						<li><hr class="dropdown-divider"></li>
+						<li><a class="dropdown-item" href="#">Marchandise</a></li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">FAQ</a>
+					</li>
+                </ul>
+				<div class="position-relative">
+					<a href="#offcanvas" type="button" class="bureau icone-panier" data-bs-toggle="offcanvas" data-bs-target="#fenetre-panier-achat" aria-controls="PanierAchat">
+						<img src="./assets/img/Nook_shopping_cart.png" alt="Panier d'achat" class="panier">
+						<span class="badge rounded-pill badge-notification badge-panier">0</span>
+					</a>
+				</div>
+            </div>
+            </div>
+        </nav> 
+    </header>
+
+    <main>
+
+		<!-- BOUTON MOSAIQUE ET LISTE -->
+		<div class="container d-flex flex-row-reverse">
+			<div class="btn-group m-4" role="group" aria-label="Basic outlined example">
+				<button type="button" class="btn btn-outline-primary active" aria-current="page" id="btn-mosaique">
+					<i class="bi bi-grid-fill"></i>
+				</button>
+				<button type="button" class="btn btn-outline-primary" id="btn-liste"><i class="bi bi-list-task"></i></button>
+			</div> 
+		</div>
+		
+		
+		<div class="container" id="conteneur-mosaique">
+			<div class="row d-flex justify-content-around row-cols-1 rows-cols-md-3">
+				<!-- CAPRI -->
+				<div class="card m-2 rounded-3 produit">
+					<img src="./assets/img/Sherb_NH.png" class="card-img-top mx-auto img-villageois" alt="Villageois Capri">
+					<div class="card-body">
+						<h2 class="card-title produit-titre">Capri</h2>
+						<p class="card-text">Capri est une chèvre bleue clair ayant des cheveux bleus foncé et des cornes rayées gris et blanc. Il est paresseux.</p>
+						<h3>45,000
+							<img src="./assets/img/bell.png" alt="Une clochette dans Animal Crossing" class="clochette">
+						</h3>
+						<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modaleCapri">
+							Détails
+						</button>                             
+						<button class="btn btn-warning ajouter-panier" data-id="produit-1" data-name="Capri" data-price="45 000" data-summary="Chèvre bleue clair" data-quantity="1" data-image="./assets/img/NH-VillagerFace-Sherb.png">
+							<i class="bi bi-basket2"></i>
+						</button>
+					</div>
+				</div>
+
+	
+				<!-- RAYMOND -->
+				<div class="card m-2 rounded-3 produit">
+					<img src="./assets/img/Raymond_NH_1.png" class="card-img-top mx-auto img-villageois" alt="Villageois Raymond">
+					<div class="card-body">
+						<h2 class="card-title produit-titre">Raymond</h2>
+						<p class="card-text">Raymond est un chat gris ayant des cheveux blonds très clair. Il porte des lunettes et a un œil marron et un autre vert.</p>
+						<h3>95,000
+							<img src="./assets/img/bell.png" alt="Une clochette dans Animal Crossing" class="clochette">
+						</h3>
+						<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modaleRaymond">
+							Détails
+						</button>                             
+						<button class="btn btn-warning ajouter-panier" data-id="produit-2" data-name="Raymond" data-price="95 000" data-summary="Chat gris" data-quantity="1" data-image="./assets/img/NH-VillagerFace-Raymond.png">
+							<i class="bi bi-basket2"></i>
+						</button>
+					</div>
+				</div>
+	
+	
+				
+	
+				<!-- MATHÉO -->
+				<div class="card m-2 rounded-3 produit">
+					<img src="./assets/img/Marshal_NH.png" class="card-img-top mx-auto img-villageois" alt="Villageois Mathéo">
+					<div class="card-body">
+						<h2 class="card-title produit-titre">Matheo</h2>
+						<p class="card-text">Mathéo est un écureuil blanc cassé avec une mèche blonde sur le front, des joues roses et des yeux noirs. Il est chic.</p>
+						<h3>51,000
+							<img src="./assets/img/bell.png" alt="Une clochette dans Animal Crossing" class="clochette">
+						</h3>   
+						<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modaleMatheo">
+							Détails
+						</button>                          
+						<button class="btn btn-warning ajouter-panier" data-id="produit-3" data-name="Matheo" data-price="51 000" data-summary="Écureuil blanc cassé" data-quantity="1" data-image="./assets/img/NH-VillagerFace-Marshal.png">
+							<i class="bi bi-basket2"></i>
+						</button>
+					</div>
+				</div>
+				
+				<!-- LAURA -->
+				<div class="card m-2 rounded-3 produit">
+					<img src="./assets/img/Judy_NH.png" class="card-img-top mx-auto img-villageois" alt="Villageoise Laura">
+					<div class="card-body">
+						<h2 class="card-title produit-titre">Laura</h2>
+						<p class="card-text">Laura est une oursonne dont le pelage est en dégradé bleu clair à rose pâle sur l'entièreté de son corps. Elle est arrogante</p>
+						<h3 class="prix">63,000
+							<img src="./assets/img/bell.png" alt="Une clochette dans Animal Crossing" class="clochette">
+						</h3> 
+						<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modaleLaura">
+							Détails
+						</button>                            
+						<button class="btn btn-warning ajouter-panier" data-id="produit-4" data-name="Laura" data-price="63 000" data-summary="Oursonne bleu et rose" data-quantity="1" data-image="./assets/img/NH-VillagerFace-Judy.png">
+							<i class="bi bi-basket2"></i>
+						</button>
+					</div>
+				</div>
+				
+				
+				
+				<!-- SUZY  -->
+				<div class="card m-2 rounded-3">
+					<img src="./assets/img/Merry_NH.png" class="card-img-top mx-auto img-villageois" alt="Villageoise Suzy">
+					<div class="card-body">
+						<h2 class="card-title produit-titre">Suzy</h2>
+						<p class="card-text">Suzy est un chat blanc avec de gros yeux noirs, des cheveux roux et l'intérieur de ses oreilles est roses. Elle est vive.</p>
+						<h3>25,000
+							<img src="./assets/img/bell.png" alt="Une clochette dans Animal Crossing" class="clochette">
+						</h3> 
+						<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modaleSuzy">
+							Détails
+						</button>                            
+						<button class="btn btn-warning ajouter-panier" data-id="produit-5" data-name="Suzy" data-price="25 000" data-summary="Chat blanc gros yeux noirs" data-quantity="1" data-image="./assets/img/NH-VillagerFace-Merry.png">
+							<i class="bi bi-basket2"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+			
+		
+		<!-- LES MODALES -->
+
+			<div class="containeur">
+
+				<!-- MODAL CAPRI -->
+	
+				<div class="modal fade" id="modaleCapri" tabindex="-1" aria-labelledby="CapriModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+						<h5 class="modal-title" id="CapriModalLabel">Les personnages</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="fermer"></button>
+						</div>
+						<div class="modal-body produit">
+							<img src="./assets/img/Sherb_NH.png" class="img-fluid img-villageois" alt="Villageois Capri">
+							<h4 class="display-3 produit-titre">Capri</h4>
+							<table class="table">
+								<tbody>
+									<tr>
+										<th scope="col">Sexe</th>
+										<td>Mâle</td>
+									</tr>
+									<tr>
+										<th scope="col">Espèce</th>
+										<td>Chèvre</td>
+									</tr>
+									<tr>
+										<th scope="col">Personnalité</th>
+										<td>Paresseux</td>
+									</tr>
+									<tr>
+										<th scope="col">Anniversaire</th>
+										<td>18 janvier</td>
+									</tr>
+									<tr>
+										<th scope="col">Signe astrologique</th>
+										<td>Capricorne</td>
+									</tr>
+									<tr>
+										<th scope="col">Phrase signature</th>
+										<td>"Bââââille"</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="bi bi-arrow-return-left"></i></button>
+						<button class="btn btn-warning ajouter-panier" data-id="produit-1" data-name="Capri" data-price="45 000" data-summary="Chèvre bleue clair" data-quantity="1" data-image="./assets/img/NH-VillagerFace-Sherb.png">
+							<i class="bi bi-basket2"></i>
+						</button>
+						</div>
+					</div>
+					</div>
+				</div>
+	
+	
+				<!-- MODAL RAYMOND -->
+	
+				<div class="modal fade" id="modaleRaymond" tabindex="-1" aria-labelledby="RaymondModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+						<h5 class="modal-title" id="RaymondModalLabel">Les personnages</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="fermer"></button>
+						</div>
+						<div class="modal-body produit">
+							<img src="./assets/img/Raymond_NH_1.png" class="img-fluid img-villageois" alt="Villageois Raymond">
+							<h4 class="display-3 produit-titre">Raymond</h4>
+							<table class="table">
+								<tbody>
+									<tr>
+										<th scope="col">Sexe</th>
+										<td>Mâle</td>
+									</tr>
+									<tr>
+										<th scope="col">Espèce</th>
+										<td>Chat</td>
+									</tr>
+									<tr>
+										<th scope="col">Personnalité</th>
+										<td>Chic</td>
+									</tr>
+									<tr>
+										<th scope="col">Anniversaire</th>
+										<td>1er octobre</td>
+									</tr>
+									<tr>
+										<th scope="col">Signe astrologique</th>
+										<td>Balance</td>
+									</tr>
+									<tr>
+										<th scope="col">Phrase signature</th>
+										<td>"Panache"</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="bi bi-arrow-return-left"></i></button>
+						<button class="btn btn-warning ajouter-panier" data-id="produit-2" data-name="Raymond" data-price="95 000" data-summary="Chat gris" data-quantity="1" data-image="./assets/img/NH-VillagerFace-Raymond.png">
+							<i class="bi bi-basket2"></i>
+						</button>
+						</div>
+					</div>
+					</div>
+				</div>
+
+				<!-- MOADAL MATHÉO -->
+	
+				<div class="modal fade" id="modaleMatheo" tabindex="-1" aria-labelledby="MatheoModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+						<h5 class="modal-title" id="MatheoModalLabel">Les personnages</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="fermer"></button>
+						</div>
+						<div class="modal-body produit">
+							<img src="./assets/img/Marshal_NH.png" class="img-fluid img-villageois" alt="Villageois Matheo">
+							<h4 class="display-3 produit-titre">Matheo</h4>
+							<table class="table">
+								<tbody>
+									<tr>
+										<th scope="col">Sexe</th>
+										<td>Mâle</td>
+									</tr>
+									<tr>
+										<th scope="col">Espèce</th>
+										<td>Écureuil</td>
+									</tr>
+									<tr>
+										<th scope="col">Personnalité</th>
+										<td>Chic</td>
+									</tr>
+									<tr>
+										<th scope="col">Anniversaire</th>
+										<td>29 septembre</td>
+									</tr>
+									<tr>
+										<th scope="col">Signe astrologique</th>
+										<td>Balance</td>
+									</tr>
+									<tr>
+										<th scope="col">Phrase signature</th>
+										<td>"Carpe Diem"</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="bi bi-arrow-return-left"></i></button>
+						<button class="btn btn-warning ajouter-panier" data-id="produit-3" data-name="Matheo" data-price="51 000" data-summary="Écureuil blanc cassé" data-quantity="1" data-image="./assets/img/NH-VillagerFace-Marshal.png">
+							<i class="bi bi-basket2"></i>
+						</button>
+						</div>
+					</div>
+					</div>
+				</div>
+
+				<!-- MOADAL LAURA -->
+	
+				<div class="modal fade" id="modaleLaura" tabindex="-1" aria-labelledby="lauraModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="lauraModalLabel">Les personnages</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="fermer"></button>
+							</div>
+							<div class="modal-body">
+								<img src="./assets/img/Judy_NH.png" class="img-fluid img-villageois" alt="Villageois Laura">
+								<h4 class="display-3 produit-titre">Laura</h4>
+								<table class="table">
+								<tbody>
+									<tr>
+										<th scope="col">Sexe</th>
+										<td>Femelle</td>
+									</tr>
+									<tr>
+										<th scope="col">Espèce</th>
+										<td>Ourson</td>
+									</tr>
+									<tr>
+										<th scope="col">Personnalité</th>
+										<td>Arrogante</td>
+									</tr>
+									<tr>
+										<th scope="col">Anniversaire</th>
+										<td>10 mars</td>
+									</tr>
+									<tr>
+										<th scope="col">Signe astrologique</th>
+										<td>Poisson</td>
+									</tr>
+									<tr>
+										<th scope="col">Phrase signature</th>
+										<td>"Oh là là"</td>
+									</tr>
+								</tbody>
+								</table>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="bi bi-arrow-return-left"></i></button>
+								<button class="btn btn-warning ajouter-panier" data-id="produit-4" data-name="Laura" data-price="63 000" data-summary="Oursonne bleu et rose" data-quantity="1" data-image="./assets/img/NH-VillagerFace-Judy.png">
+								<i class="bi bi-basket2"></i>
+							</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- MOADAL SUZY -->
+			
+				<div class="modal fade" id="modaleSuzy" tabindex="-1" aria-labelledby="suzyModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="suzyModalLabel">Les personnages</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="fermer"></button>
+							</div>
+							<div class="modal-body">
+								<img src="./assets/img/Merry_NH.png" class="img-fluid img-villageois" alt="Villageois Suzy">
+								<h4 class="display-3 produit-titre">Suzy</h4>
+								<table class="table">
+								<tbody>
+									<tr>
+										<th scope="col">Sexe</th>
+										<td>Femelle</td>
+									</tr>
+									<tr>
+										<th scope="col">Espèce</th>
+										<td>Chat</td>
+									</tr>
+									<tr>
+										<th scope="col">Personnalité</th>
+										<td>Vive</td>
+									</tr>
+									<tr>
+										<th scope="col">Anniversaire</th>
+										<td>29 juin</td>
+									</tr>
+									<tr>
+										<th scope="col">Signe astrologique</th>
+										<td>Cancer</td>
+									</tr>
+									<tr>
+										<th scope="col">Phrase signature</th>
+										<td>"Miou-mi"</td>
+									</tr>
+								</tbody>
+								</table>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i class="bi bi-arrow-return-left"></i></button>
+								<button class="btn btn-warning ajouter-panier" data-id="produit-5" data-name="Suzy" data-price="25 000" data-summary="Chat blanc gros yeux noirs" data-quantity="1" data-image="./assets/img/NH-VillagerFace-Merry.png">
+								<i class="bi bi-basket2"></i>
+							</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+				
+				
+				
+				
+				
+				<!-- VERSION LISTE -->
+				<div class="container liste" id="conteneur-liste">
+					<div class="row">
+						<table class="table align-middle">
+							<thead>
+								<tr>
+									<th>Image</th>
+									<th>Titre</th>
+					<th>Description</th>
+					<th>Prix</th>
+				  </tr>
+				</thead>
+				<tbody>
+
+					<!-- CAPRI -->
+				  <tr>
+					<th><img src="./assets/img/NH-VillagerFace-Sherb.png" class="img-fluid" alt="Visage Capri" width="100px"></th>
+					<th class="produit-titre">Capri</th>
+					<td>Capri est une chèvre bleue clair ayant des cheveux bleus foncé et des cornes rayées gris et blanc. Il est paresseux.</td>
+					
+					<th>45,000
+						<img src="./assets/img/bell.png" alt="Une clochette dans Animal Crossing" class="clochette">
+					</th>
+					<th>
+						<button type="button" class="btn btn-primary btn-modal" data-bs-toggle="modal" data-bs-target="#modaleCapri">
+							<i class="bi bi-card-list"></i>
+						</button>
+						<button class="btn btn-warning ajouter-panier" data-id="produit-1" data-name="Capri" data-price="45 000" data-summary="Chèvre bleue clair" data-quantity="1" data-image="./assets/img/NH-VillagerFace-Sherb.png">
+							<i class="bi bi-basket2"></i>       
+						</button>
+					</th>
+				  </tr>
+
+				  <!-- RAYMOND -->
+				  <tr>
+					<th class="article"><img src="./assets/img/NH-VillagerFace-Raymond.png" class="img-fluid" alt="Visage Raymond" width="100px"></th>
+					<th class="produit-titre">Raymond</th>
+					<td>Raymond est un chat gris ayant des cheveux blonds très clair. Il porte des lunettes et a un œil marron et un autre vert.</td>
+					<th>95,000
+						<img src="./assets/img/bell.png" alt="Une clochette dans Animal Crossing" class="clochette">
+					</th>
+					<th>
+					  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modaleRaymond">
+						<i class="bi bi-card-list"></i>
+					  </button>
+					  <button class="btn btn-warning ajouter-panier" data-id="produit-2" data-name="Raymond" data-price="95 000" data-summary="Chat gris" data-quantity="1" data-image="./assets/img/NH-VillagerFace-Raymond.png">
+						<i class="bi bi-basket2"></i>       
+					  </button>
+					</th>
+				  </tr>
+
+				  <!-- MATHEO -->
+				  <tr>
+					<th><img src="./assets/img/NH-VillagerFace-Marshal.png" class="img-fluid" alt="Visage Matheo" width="100px"></th>
+					<th class="produit-titre">Matheo</th>
+					<td>Mathéo est un écureuil blanc cassé avec une mèche blonde sur le front, des joues roses et des yeux noirs. Il est chic.</td>
+					<th>51,000
+						<img src="./assets/img/bell.png" alt="Une clochette dans Animal Crossing" class="clochette">
+					</th>
+					<th>
+					  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modaleMatheo">
+						<i class="bi bi-card-list"></i>
+					  </button>
+					  <button class="btn btn-warning ajouter-panier" data-id="produit-3" data-name="Matheo" data-price="51 000" data-summary="Écureuil blanc cassé" data-quantity="1" data-image="./assets/img/NH-VillagerFace-Marshal.png">
+						<i class="bi bi-basket2"></i>       
+					  </button>
+					</th>
+				  </tr>
+
+				  <!-- LAURA -->
+				  <tr>
+					<th><img src="./assets/img/NH-VillagerFace-Judy.png" class="img-fluid" alt="Visage Judy" width="100px"></th>
+					<th class="produit-titre">Laura</th>
+					<td>Laura est une oursonne dont le pelage est en dégradé bleu clair à rose pâle sur l'entièreté de son corps. Elle est arrogante</td>
+					<th>63,000
+						<img src="./assets/img/bell.png" alt="Une clochette dans Animal Crossing" class="clochette">
+					</th>
+					<th>
+					  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modaleLaura">
+						<i class="bi bi-card-list"></i>
+					  </button>
+					  <button class="btn btn-warning ajouter-panier" data-id="produit-4" data-name="Laura" data-price="63 000" data-summary="Oursonne bleu et rose" data-quantity="1" data-image="./assets/img/NH-VillagerFace-Judy.png">
+						<i class="bi bi-basket2"></i>       
+					  </button>
+					</th>
+				  </tr>
+
+				  <!-- SUZY -->
+				  <tr>
+					<th><img src="./assets/img/NH-VillagerFace-Merry.png" class="img-fluid" alt="Visage Suzy" width="100px"></th>
+					<th class="produit-titre">Suzy</th>
+					<td>Suzy est un chat blanc avec de gros yeux noirs, des cheveux roux et l'intérieur de ses oreilles est roses. Elle est vive.</td>
+					<th>25,000
+						<img src="./assets/img/bell.png" alt="Une clochette dans Animal Crossing" class="clochette">
+					</th>
+					<th>
+					  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modaleSuzy">
+						<i class="bi bi-card-list"></i>
+					  </button>
+					  <button class="btn btn-warning ajouter-panier" data-id="produit-5" data-name="Suzy" data-price="25 000" data-summary="Chat blanc gros yeux noirs" data-quantity="1" data-image="./assets/img/NH-VillagerFace-Merry.png">
+						<i class="bi bi-basket2"></i>       
+					  </button>
+					</th>
+				  </tr>
+				</tbody>
+			  </table>
+			</div>
+		  </div>
+
+		<!-- PANIER D'ACHAT -->
+
+		<section class="offcanvas offcanvas-end" tabindex="-1" id="fenetre-panier-achat" aria-labelledby="PanierAchat">
+			<div class="offcanvas-header">
+			  <h2>Panier d'achat</h2>
+			</div>
+			
+			<div class="offcanvas-body">
+			  <h3>Produits dans le panier d'achat</h3>
+			  <div class="articles-panier">
+					<table class="table align-middle">
+						<thead>
+							<tr>
+								<th>Image</th>
+								<th colspan="3">Articles</th>
+								<th>Prix</th>
+								<th>Quantité</th>
+							</tr>
+						</thead>
+					</table> 
+					<ul class="panier-lignes">
+
+					</ul> 
+			  </div>
+			</div>
+
+			
+			
+			<div class="alert alert-info d-flex justify-content-center">
+			  <h3 class="mx-5 mt-2">Total:</h3>
+			  <h3 class="mt-2 prix-total-panier">0</h3>
+			  <img src="./assets/img/bag_bells.png" alt="Un sac de clochettes dans Animal Crossing" width="40px">
+			</div>
+			
+			<div class="container d-flex justify-content-around">
+				<a class="btn btn-success p-3 m-3" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Passer au paiement</a>
+				<button class="btn btn-warning p-3 m-3" data-bs-dismiss="offcanvas" aria-label="fermer">Retour au magasin</button>
+			</div>
+		</section>
+    </main>
+
+    <footer class="d-flex justify-content-center bg-warning">
+		<div class="position-relative">
+			<a href="#offcanvas" type="button" class="mobile icone-panier" data-bs-toggle="offcanvas" data-bs-target="#fenetre-panier-achat" aria-controls="PanierAchat">
+				<img src="./assets/img/Nook_shopping_cart.png" alt="Panier d'achat" class="panier">
+				<span class="badge rounded-pill badge-notification badge-panier">0</span>
+			</a>
+		</div>
+    </footer>
+
+
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="./assets/scripts/vendors/main.js"></script>
+</body>
+</html>

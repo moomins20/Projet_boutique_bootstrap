@@ -1,0 +1,74 @@
+@import 'variables';
+// @import "../../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+#logo {
+    width: 15vw;
+    max-width: 150px;
+}
+
+.bureau {
+    display: none;
+}
+
+.mobile {
+    display: block
+}
+
+.card {
+    width: 25rem;
+}
+
+.card-img-top {
+    max-width: 70%;
+}
+
+.clochette {
+    width: 55px;
+}
+
+.panier {
+    width: 100px;
+}
+
+.liste {
+    display: none;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: fink, sans-serif;
+}
+
+nav ul li {
+    font-family: fink, sans-serif;
+    font-size: 2em;
+    margin: 0 20px;
+
+    a {
+        color: red;
+    }
+}
+
+.badge-notification{
+    background:red;
+    position: relative;
+    top: -30px;
+    right: 25px;
+    font-size: 1em;
+}
+
+.offcanvas {
+    width: 800px;
+}
+
+
+
+@media screen and (min-width: 992px) {
+  .bureau {
+        display: block;
+  }
+
+  .mobile {
+      display: none;
+  }
+}
+
